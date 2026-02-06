@@ -1,0 +1,158 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: ERP
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img "Glopark" [ref=e8]
+          - heading "ERP" [level=1] [ref=e10]
+        - button "ŞİRKET-1 / Merkez şube / 2026" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: ŞİRKET-1 / Merkez şube / 2026
+          - img [ref=e13]
+      - generic [ref=e15]:
+        - button [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - button [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+        - button "Uygulamalar" [ref=e26] [cursor=pointer]:
+          - img [ref=e27]
+        - button "T" [ref=e38] [cursor=pointer]:
+          - generic [ref=e40]: T
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - button "Yeni" [ref=e44] [cursor=pointer]:
+          - img [ref=e45]
+          - generic [ref=e46]: Yeni
+        - navigation [ref=e47]:
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - button "Dashboard" [ref=e51] [cursor=pointer]:
+                - img [ref=e52]
+                - generic [ref=e57]: Dashboard
+            - listitem [ref=e58]:
+              - generic [ref=e59]:
+                - button "Satış" [ref=e60] [cursor=pointer]:
+                  - img [ref=e61]
+                  - generic [ref=e65]: Satış
+                  - img [ref=e66]
+                - list [ref=e68]:
+                  - listitem [ref=e69]:
+                    - button "Satış Faturası" [ref=e70] [cursor=pointer]:
+                      - img [ref=e71]
+                      - generic [ref=e74]: Satış Faturası
+                  - listitem [ref=e75]:
+                    - button "Müşteri Siparişleri" [ref=e76] [cursor=pointer]:
+                      - img [ref=e77]
+                      - generic [ref=e80]: Müşteri Siparişleri
+            - listitem [ref=e81]:
+              - button "Alış" [ref=e83] [cursor=pointer]:
+                - img [ref=e84]
+                - generic [ref=e87]: Alış
+                - img [ref=e88]
+            - listitem [ref=e90]:
+              - button "Kişiler" [ref=e92] [cursor=pointer]:
+                - img [ref=e93]
+                - generic [ref=e98]: Kişiler
+            - listitem [ref=e99]:
+              - button "Stok" [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+                - generic [ref=e106]: Stok
+            - listitem [ref=e107]:
+              - button "Depo" [ref=e109] [cursor=pointer]:
+                - img [ref=e110]
+                - generic [ref=e113]: Depo
+                - img [ref=e114]
+            - listitem [ref=e116]:
+              - button "Konsinye" [ref=e118] [cursor=pointer]:
+                - img [ref=e119]
+                - generic [ref=e124]: Konsinye
+            - listitem [ref=e125]:
+              - button "Finans" [ref=e127] [cursor=pointer]:
+                - img [ref=e128]
+                - generic [ref=e130]: Finans
+            - listitem [ref=e131]:
+              - button "Raporlar" [ref=e133] [cursor=pointer]:
+                - img [ref=e134]
+                - generic [ref=e136]: Raporlar
+      - generic [ref=e137]:
+        - navigation [ref=e139]:
+          - generic [ref=e140]:
+            - button "Menüyü Aç/Kapat" [ref=e141] [cursor=pointer]:
+              - img [ref=e142]
+            - generic [ref=e143]:
+              - img [ref=e144]
+              - generic [ref=e146]: Dashboard
+        - main [ref=e147]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "Son İşlemler" [level=3] [ref=e151]
+              - button "Tümünü Gör →" [ref=e152] [cursor=pointer]
+            - table [ref=e155]:
+              - rowgroup [ref=e156]:
+                - row "İşlem No Müşteri Tip Tutar Durum Tarih" [ref=e157]:
+                  - columnheader "İşlem No" [ref=e158]
+                  - columnheader "Müşteri" [ref=e159]
+                  - columnheader "Tip" [ref=e160]
+                  - columnheader "Tutar" [ref=e161]
+                  - columnheader "Durum" [ref=e162]
+                  - columnheader "Tarih" [ref=e163]
+              - rowgroup [ref=e164]:
+                - row "FAT-2024-001 ABC Teknoloji A.Ş. Satış ₺125,000 Tamamlandı 26.10.2025" [ref=e165]:
+                  - cell "FAT-2024-001" [ref=e166]
+                  - cell "ABC Teknoloji A.Ş." [ref=e167]
+                  - cell "Satış" [ref=e168]:
+                    - generic [ref=e169]: Satış
+                  - cell "₺125,000" [ref=e170]
+                  - cell "Tamamlandı" [ref=e171]:
+                    - generic [ref=e172]: Tamamlandı
+                  - cell "26.10.2025" [ref=e173]
+                - row "FAT-2024-002 XYZ Lojistik Ltd. Satış ₺89,500 Beklemede 25.10.2025" [ref=e174]:
+                  - cell "FAT-2024-002" [ref=e175]
+                  - cell "XYZ Lojistik Ltd." [ref=e176]
+                  - cell "Satış" [ref=e177]:
+                    - generic [ref=e178]: Satış
+                  - cell "₺89,500" [ref=e179]
+                  - cell "Beklemede" [ref=e180]:
+                    - generic [ref=e181]: Beklemede
+                  - cell "25.10.2025" [ref=e182]
+                - row "GID-2024-045 Demir Çelik San. Satın Alma ₺45,200 Tamamlandı 24.10.2025" [ref=e183]:
+                  - cell "GID-2024-045" [ref=e184]
+                  - cell "Demir Çelik San." [ref=e185]
+                  - cell "Satın Alma" [ref=e186]:
+                    - generic [ref=e187]: Satın Alma
+                  - cell "₺45,200" [ref=e188]
+                  - cell "Tamamlandı" [ref=e189]:
+                    - generic [ref=e190]: Tamamlandı
+                  - cell "24.10.2025" [ref=e191]
+                - row "FAT-2024-003 Global Perakende Satış ₺210,000 Onay Bekliyor 23.10.2025" [ref=e192]:
+                  - cell "FAT-2024-003" [ref=e193]
+                  - cell "Global Perakende" [ref=e194]
+                  - cell "Satış" [ref=e195]:
+                    - generic [ref=e196]: Satış
+                  - cell "₺210,000" [ref=e197]
+                  - cell "Onay Bekliyor" [ref=e198]:
+                    - generic [ref=e199]: Onay Bekliyor
+                  - cell "23.10.2025" [ref=e200]
+                - row "GID-2024-046 Tedarik A.Ş. Satın Alma ₺67,800 Tamamlandı 22.10.2025" [ref=e201]:
+                  - cell "GID-2024-046" [ref=e202]
+                  - cell "Tedarik A.Ş." [ref=e203]
+                  - cell "Satın Alma" [ref=e204]:
+                    - generic [ref=e205]: Satın Alma
+                  - cell "₺67,800" [ref=e206]
+                  - cell "Tamamlandı" [ref=e207]:
+                    - generic [ref=e208]: Tamamlandı
+                  - cell "22.10.2025" [ref=e209]
+                - row "FAT-2024-004 Endüstri Grup Satış ₺156,300 Tamamlandı 21.10.2025" [ref=e210]:
+                  - cell "FAT-2024-004" [ref=e211]
+                  - cell "Endüstri Grup" [ref=e212]
+                  - cell "Satış" [ref=e213]:
+                    - generic [ref=e214]: Satış
+                  - cell "₺156,300" [ref=e215]
+                  - cell "Tamamlandı" [ref=e216]:
+                    - generic [ref=e217]: Tamamlandı
+                  - cell "21.10.2025" [ref=e218]
+  - region "Notifications alt+T"
+```
