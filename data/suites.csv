@@ -1,38 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","0","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi @smoke","erp/tests/person-create.spec.ts","",""
-"","0","Yeni Alış Faturası Oluşturma","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create.spec.ts","",""
-"
-### Senaryo 5: Hem Mail Hem Şifre Boş
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
-| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
-| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","6791","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
-"
-### Senaryo 2: Doğru Mail - Yanlış Şifre
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
-| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
-| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
-| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
-","6348","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
 "","0","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişiler Yönetimi @smoke","erp/tests/kisi-hareket-takip.spec.ts","",""
-"
-### Senaryo 1: Yanlış Mail - Doğru Şifre
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Geçersiz bir email (yanlis_mail_123@glopark.com) girilir. | Email girişi kabul edilmeli. |
-| 2 | Geçerli bir şifre girilir. | Şifre maskelenmiş olmalı. |
-| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
-| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
-","7122","Senaryo 1: Yanlış Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
-"","0","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi (Negatif) @smoke","erp/tests/person-create-negative.spec.ts","",""
-"","0","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","erp/tests/person-corporate-create-negative.spec.ts","",""
 "","0","ERP Dashboard Sayfasına Otomatik Giriş @smoke","erp-ui","2026-03-26","skipped","2026-03-26","ERP Oturum ve Dashboard Kontrolü @smoke","erp/tests/login.spec.ts","",""
 "
 ### Alış Faturası Negatif Senaryolar
@@ -46,8 +13,50 @@ Alış faturası formundaki zorunlu alanların boş bırakılması durumunda bek
 | 4 | Plasiyer seçilir, Kaydet'e tıklanır | ""Nakit ödemelerde kasa seçimi zorunludur"" toast mesajı |
 | 5 | Kasa seçilir, Kaydet'e tıklanır | ""Fatura kaydedildi"" başarı mesajı |
 ","41797","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-26","passed","2026-03-26","ERP - Alış Yönetimi @smoke @negative","erp\tests\purchase-invoice-create-negative.spec.ts","",""
+"","1","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi @smoke","erp/tests/person-create.spec.ts","",""
+"
+### Senaryo 1: Yanlış Mail - Doğru Şifre
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Geçersiz bir email (yanlis_mail_123@glopark.com) girilir. | Email girişi kabul edilmeli. |
+| 2 | Geçerli bir şifre girilir. | Şifre maskelenmiş olmalı. |
+| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
+| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
+","7122","Senaryo 1: Yanlış Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
 "","0","Yeni Ticari Müşteri Ekleme ve Arama","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi (Ticari) @smoke","erp/tests/person-corporate-create.spec.ts","",""
-"","1","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Stok Yönetimi @smoke","erp/tests/stock-create.spec.ts","",""
+"
+### Senaryo 5: Hem Mail Hem Şifre Boş
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
+| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
+| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
+","6791","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+"
+### Senaryo 4: Doğru Mail - Boş Şifre
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Geçerli bir email girilir. | Email girişi başarılı olmalı. |
+| 2 | Şifre alanı boş bırakılır. | Alan boş kalmalı. |
+| 3 | Giriş denemesi yapılır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
+| 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
+","6968","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+"","0","Yeni Alış Faturası Oluşturma","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create.spec.ts","",""
+"","0","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Stok Yönetimi @smoke","erp/tests/stock-create.spec.ts","",""
+"","0","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi (Negatif) @smoke","erp/tests/person-create-negative.spec.ts","",""
+"
+### Senaryo 2: Doğru Mail - Yanlış Şifre
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
+| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
+| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
+| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
+","6348","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
 "
 ### Kişi Hareket Takip Senaryosu (Branch-Level Visibility)
 Kaydedilen bir Kişinin hangi şubelerce görülebileceğini ve hareketlerinin hangi yetkili şubelerce gözlemlenebileceğini test etmek.
@@ -62,19 +71,7 @@ Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye a
 | 5 | MERKEZ'de kişinin hala göründüğü doğrulanır ve Hareketler detayına girilir | Kişi listede bulunmalı ve detayına girilebilmeli |
 | 6 | MERKEZ'de kişinin hareketler sekmesinde hareketin olmadığı doğrulanır | ""Hareket bulunamadı"" yazısı GÖRÜNMELİDİR |
 ","38162","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-26","passed","2026-03-26","ERP - Kişiler Yönetimi @smoke @auth","erp\tests\kisi-hareket-takip.spec.ts","",""
-"
-### ERP Giriş ve Oturum Yapılandırma Senaryosu
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Glopark Login Sayfasına gidilir. | Sayfa başarıyla yüklenmeli. |
-| 2 | Uygulama listesinde 'STAGING' kontrol edilir, yoksa eklenir. | Uygulama seçilmeli ve ilerlenmeli. |
-| 3 | Servis menüsü açılır, 'Datapark Staging' kontrol edilir, yoksa eklenir. | Servis seçilmeli ve form yüklenmeli. |
-| 4 | Email (halerva2020@gmail.com) ve şifre girilerek Giriş Yap tıklanır. | Kimlik doğrulama süreci başlamalı. |
-| 5 | Dinamik üretilen TOTP kodu girilerek doğrulanır. | 2FA başarılı şekilde geçilmeli. |
-| 6 | Dashboard doğrulanır ve oturum kaydedilir. | Oturum başarıyla saklanmalı. |
-","692","authenticate ERP","setup","2026-03-26","failed","2026-03-26","","erp/tests/auth.setup.ts","",""
-"","0","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create-negative.spec.ts","",""
+"","1","Yeni Satış Faturası Oluşturma","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Fatura Yönetimi @smoke","erp/tests/invoice-create.spec.ts","",""
 "
 ### Senaryo 3: Boş Mail - Doğru Şifre
 
@@ -86,14 +83,17 @@ Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye a
 | 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
 ","6426","Senaryo 3: Boş Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
 "auth.setup.ts ile kaydedilen .auth/erp-user.json dosyasını kullanarak login olmadan Dashboard'a erişimi doğrular.","1763","ERP Dashboard Sayfasına Otomatik Giriş @erp-smoke","erp-ui","2026-03-26","passed","2026-03-26","ERP Oturum ve Dashboard Kontrolü @smoke","erp\tests\login.spec.ts","",""
-"","0","Yeni Satış Faturası Oluşturma","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Fatura Yönetimi @smoke","erp/tests/invoice-create.spec.ts","",""
 "
-### Senaryo 4: Doğru Mail - Boş Şifre
+### ERP Giriş ve Oturum Yapılandırma Senaryosu
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
 | :--- | :--- | :--- |
-| 1 | Geçerli bir email girilir. | Email girişi başarılı olmalı. |
-| 2 | Şifre alanı boş bırakılır. | Alan boş kalmalı. |
-| 3 | Giriş denemesi yapılır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
-| 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","6968","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+| 1 | Glopark Login Sayfasına gidilir. | Sayfa başarıyla yüklenmeli. |
+| 2 | Uygulama listesinde 'STAGING' kontrol edilir, yoksa eklenir. | Uygulama seçilmeli ve ilerlenmeli. |
+| 3 | Servis menüsü açılır, 'Datapark Staging' kontrol edilir, yoksa eklenir. | Servis seçilmeli ve form yüklenmeli. |
+| 4 | Email (halerva2020@gmail.com) ve şifre girilerek Giriş Yap tıklanır. | Kimlik doğrulama süreci başlamalı. |
+| 5 | Dinamik üretilen TOTP kodu girilerek doğrulanır. | 2FA başarılı şekilde geçilmeli. |
+| 6 | Dashboard doğrulanır ve oturum kaydedilir. | Oturum başarıyla saklanmalı. |
+","30555","authenticate ERP","setup","2026-03-26","broken","2026-03-26","","erp/tests/auth.setup.ts","",""
+"","0","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","erp/tests/person-corporate-create-negative.spec.ts","",""
+"","0","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-26","skipped","2026-03-26","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create-negative.spec.ts","",""
