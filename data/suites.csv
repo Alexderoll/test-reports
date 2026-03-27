@@ -1,5 +1,46 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
 "
+### Alış Faturası Negatif Senaryolar
+Alış faturası formundaki zorunlu alanların boş bırakılması durumunda beklenen uyarı mesajları doğrulanır.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Form açılıp boşken Kaydet'e tıklanır | ""Lütfen tedarikçi bilgilerini eksiksiz doldurunuz"" toast mesajı |
+| 2 | Tedarikçi seçilir, Kaydet'e tıklanır | ""Lütfen en az bir ürün ekleyiniz"" toast mesajı |
+| 3 | Ürün seçilir, Kaydet'e tıklanır | ""Lütfen plasiyer seçiniz"" toast mesajı |
+| 4 | Plasiyer seçilir, Kaydet'e tıklanır | ""Nakit ödemelerde kasa seçimi zorunludur"" toast mesajı |
+| 5 | Kasa seçilir, Kaydet'e tıklanır | ""Fatura kaydedildi"" başarı mesajı |
+","45846","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-27","passed","2026-03-27","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create-negative.spec.ts","",""
+"
+### Alış Faturası Negatif Senaryolar
+Alış faturası formundaki zorunlu alanların boş bırakılması durumunda beklenen uyarı mesajları doğrulanır.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Form açılıp boşken Kaydet'e tıklanır | ""Lütfen tedarikçi bilgilerini eksiksiz doldurunuz"" toast mesajı |
+| 2 | Tedarikçi seçilir, Kaydet'e tıklanır | ""Lütfen en az bir ürün ekleyiniz"" toast mesajı |
+| 3 | Ürün seçilir, Kaydet'e tıklanır | ""Lütfen plasiyer seçiniz"" toast mesajı |
+| 4 | Plasiyer seçilir, Kaydet'e tıklanır | ""Nakit ödemelerde kasa seçimi zorunludur"" toast mesajı |
+| 5 | Kasa seçilir, Kaydet'e tıklanır | ""Fatura kaydedildi"" başarı mesajı |
+","41797","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-26","passed","2026-03-26","ERP - Alış Yönetimi @smoke @negative","erp\tests\purchase-invoice-create-negative.spec.ts","",""
+"
+### Stok Kayıt Senaryosu
+
+Bu test, Faker kullanılarak tamamen rastgele kod, ad ve fiyat verileriyle yeni bir stok (ürün) kartı oluşturur ve listenin doğruluğunu teyit eder.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Dashboard üzerinden 'Stok' menüsüne gidilir ve 'Yeni Ürün' tıklanır. | Yeni stok ekleme formu açılmalı. |
+| 2 | Benzersiz Stok Kodu (${testData.stockCode}) ve Ürün Adı (${testData.stockName}) doldurulur. | Temel bilgiler başarıyla girilmeli. |
+| 3 | Marka araması yapılarak seçilir (örn: OTOMASYON). | İlgili marka başarıyla seçilebilmeli. |
+| 4 | Şube/Departman alanından 'Tüm Şubeler' işaretlenir. | Şube kısıtlamaları kaldırılmalı/atanmalı. |
+| 5 | Kategori ve Nitelik (OTOMASYON NİTELİK vb.) tanımlamaları yapılır. | Ürün varyasyonları/özellikleri belirlenmeli. |
+| 6 | Alış ve Satış fiyatları doldurulur. | Fiyatlandırma bilgileri kaydedilmeli. |
+| 7 | (In-Memory) Sanal bir ürün resmi sisteme otomatik yüklenir. | Windows/OS penceresi açılmadan arka planda resim yüklenmeli. |
+| 8 | 'Kaydet' butonuna tıklanarak ürün oluşturulur. | Kayıt işleminin ardından stok listesi ekranına dönülmeli. |
+| 9 | Stok adıyla filtreleme yapılarak detayına girilir ve Stok Kodu'nun varlığı içeride doğrulanır. | Ürünün sisteme başarılı şekilde eklendiği %100 teyit edilmeli. |
+","10761","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Stok Yönetimi @smoke","erp/tests/stock-create.spec.ts","",""
+"
 ### Senaryo 1: Yanlış Mail - Doğru Şifre
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
@@ -10,28 +51,60 @@
 | 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
 ","7122","Senaryo 1: Yanlış Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
 "
-### Alış Faturası Kayıt Senaryosu
-Yeni codegen yapısı ile tedarikçi seçilip alış faturası kaydı yapılır.
+### Bireysel Müşteri (Kişi) Kayıt Senaryosu
+
+Bu test, Faker kütüphanesi kullanılarak üretilen dinamik verilerle yeni bir bireysel müşteri kaydı oluşturur ve ardından listede aratarak doğrulama yapar.
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
 | :--- | :--- | :--- |
-| 1 | Dashboard üzerinden 'Alış' -> 'Alış Faturası' menüsüne gidilerek Yeni Fatura açılır. | Yeni fatura kayıt form ekranı yüklenmeli |
-| 2 | Tedarikçi araması yapılıp seçilir, ardından Plasiyer atanır. | Tedarikçi ve plasiyer bilgisi faturaya başarıyla işlenmeli |
-| 3 | Faturaya ürün (kalem) eklenir ve ilgili Depo seçimi yapılır. | Ürün satırı ve depo bilgisi eksiksiz eklenmeli |
-| 4 | İlgili ödeme kasası (- OTOMASYON KASA TL) seçilir ve fatura Kaydedilir. | Fatura sisteme kaydedilip liste ekranına sorunsuz dönülmeli |
-| 5 | Fatura tablosunda tedarikçi ismine tıklandıktan sonra ürün bilgileri ve tutar doğrulanır. | Faturanın kalemleriyle beraber sorunsuz oluştuğu ve tutarların listelendiği teyit edilmeli |
-","15483","Yeni Alış Faturası Oluşturma","erp-ui","2026-03-27","passed","2026-03-27","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create.spec.ts","",""
-"auth.setup.ts ile kaydedilen .auth/erp-user.json dosyasını kullanarak login olmadan Dashboard'a erişimi doğrular.","1763","ERP Dashboard Sayfasına Otomatik Giriş @erp-smoke","erp-ui","2026-03-26","passed","2026-03-26","ERP Oturum ve Dashboard Kontrolü @smoke","erp\tests\login.spec.ts","",""
+| 1 | Dashboard üzerinden 'Kişiler' menüsüne gidilir ve 'Yeni Kişi' tıklanır. | Yeni kişi ekleme formu açılmalı. |
+| 2 | Kişi Kodu (Auto78550), Ad Soyad, TC No gibi temel bilgiler doldurulur. | Form alanları başarıyla doldurulmalı. |
+| 3 | Müşteri rolü ve kullanılacak şube/departmanlar seçilir. | Seçimler başarıyla yapılmalı. |
+| 4 | İletişim bilgileri (Telefon, E-posta) ve Adres bilgileri doldurulur. | Veriler forma eksiksiz girilmeli. |
+| 5 | 'Kaydet' butonuna tıklanarak kayıt tamamlanır. | Başarılı kayıt sonrası kişi listesine dönülmeli. |
+| 6 | Arama alanına kayıt edilen kişinin adı yazılarak kontrol edilir. | Tabloda eklenen kişi doğrulanmalı. |
+","8549","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi @smoke","erp/tests/person-create.spec.ts","",""
 "
-### Senaryo 2: Doğru Mail - Yanlış Şifre
+### Kişi Hareket Takip Senaryosu (Branch-Level Visibility)
+Kaydedilen bir Kişinin hangi şubelerce görülebileceğini ve hareketlerinin hangi yetkili şubelerce gözlemlenebileceğini test etmek.
+Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye atanan hareket sadece KİPA SES şubesince gözlemlenebilir olması beklenir.
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
 | :--- | :--- | :--- |
-| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
-| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
-| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
-| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
-","6348","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+| 1 | Yeni kişi (Cari) oluşturulur | Kişi başarıyla kaydedilir |
+| 2 | KİPA SES şubesine geçilir ve Cari'ye yeni Satış Faturasıyla (Hareket) eklenir | Hareket başarıyla eklenir |
+| 3 | Bulunulan şubede (KİPA SES) ilgili faturanın (hareketin) tabloda göründüğü teyit edilir | Hareket tabloda görünmelidir |
+| 4 | Sağ üst menüden şube değiştirilip MERKEZ'e geçilir | Sistem şubesi değişmelidir |
+| 5 | MERKEZ'de kişinin hala göründüğü doğrulanır ve Hareketler detayına girilir | Kişi listede bulunmalı ve detayına girilebilmeli |
+| 6 | MERKEZ'de kişinin hareketler sekmesinde hareketin olmadığı doğrulanır | ""Hareket bulunamadı"" yazısı GÖRÜNMELİDİR |
+","38162","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-26","passed","2026-03-26","ERP - Kişiler Yönetimi @smoke @auth","erp\tests\kisi-hareket-takip.spec.ts","",""
+"
+### Satış Faturası Kayıt Senaryosu
+Yeni codegen yapısı ile müşteri seçilip fatura kaydı yapılır.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Dashboard üzerinden 'Fatura' menüsüne gidilerek Yeni Fatura açılır. | Yeni fatura kayıt form ekranı yüklenmeli |
+| 2 | Müşteri araması yapılıp müşteri seçilir, ardından Plasiyer atanır. | Cari ve satıcı bilgileri faturaya başarıyla işlenmeli |
+| 3 | Faturaya ürün (kalem) eklenir ve ilgili Depo seçimi yapılır. | Ürün satırı ve depo bilgisi eksiksiz eklenmeli |
+| 4 | Fatura alt açıklamalarına (IBAN, ÖDEME KODU vb.) detaylı notlar eklenir. | Açıklamalar dropdown'una notlar başarıyla kaydedilmeli |
+| 5 | İlgili ödeme kasası (${testData.cashRegister}) seçilir ve fatura Kaydedilir. | Fatura sisteme kaydedilip liste ekranına sorunsuz dönülmeli |
+| 6 | Fatura tablosunda müşteri ismine tıklandıktan sonra ürün bilgileri doğrulanır. | Faturanın kalemleriyle beraber sorunsuz oluştuğu %100 teyit edilmeli |
+","17199","Yeni Satış Faturası Oluşturma","erp-ui","2026-03-27","passed","2026-03-27","ERP - Fatura Yönetimi @smoke","erp/tests/invoice-create.spec.ts","",""
+"
+### Kişi Hareket Takip Senaryosu (Branch-Level Visibility)
+Kaydedilen bir Kişinin hangi şubelerce görülebileceğini ve hareketlerinin hangi yetkili şubelerce gözlemlenebileceğini test etmek.
+Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye atanan hareket sadece KİPA SES şubesince gözlemlenebilir olması beklenir.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Yeni kişi (Cari) oluşturulur | Kişi başarıyla kaydedilir |
+| 2 | KİPA SES şubesine geçilir ve Cari'ye yeni Satış Faturasıyla (Hareket) eklenir | Hareket başarıyla eklenir |
+| 3 | Bulunulan şubede (KİPA SES) ilgili faturanın (hareketin) tabloda göründüğü teyit edilir | Hareket tabloda görünmelidir |
+| 4 | Sağ üst menüden şube değiştirilip MERKEZ'e geçilir | Sistem şubesi değişmelidir |
+| 5 | MERKEZ'de kişinin hala göründüğü doğrulanır ve Hareketler detayına girilir | Kişi listede bulunmalı ve detayına girilebilmeli |
+| 6 | MERKEZ'de kişinin hareketler sekmesinde hareketin olmadığı doğrulanır | ""Hareket bulunamadı"" yazısı GÖRÜNMELİDİR |
+","49337","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişiler Yönetimi @smoke","erp/tests/kisi-hareket-takip.spec.ts","",""
 "
 ### Senaryo 3: Boş Mail - Doğru Şifre
 
@@ -53,8 +126,77 @@ Yeni codegen yapısı ile tedarikçi seçilip alış faturası kaydı yapılır.
 | 4 | Email (halerva2020@gmail.com) ve şifre girilerek Giriş Yap tıklanır. | Kimlik doğrulama süreci başlamalı. |
 | 5 | Dinamik üretilen TOTP kodu girilerek doğrulanır. | 2FA başarılı şekilde geçilmeli. |
 | 6 | Dashboard doğrulanır ve oturum kaydedilir. | Oturum başarıyla saklanmalı. |
-","24666","authenticate ERP","setup","2026-03-27","passed","2026-03-27","","erp/tests/auth.setup.ts","",""
-"auth.setup.ts ile kaydedilen .auth/erp-user.json dosyasını kullanarak login olmadan Dashboard'a erişimi doğrular.","3124","ERP Dashboard Sayfasına Otomatik Giriş @smoke","erp-ui","2026-03-27","passed","2026-03-27","ERP Oturum ve Dashboard Kontrolü @smoke","erp/tests/login.spec.ts","",""
+","25607","authenticate ERP","setup","2026-03-27","passed","2026-03-27","","erp/tests/auth.setup.ts","",""
+"
+### Senaryo 4: Doğru Mail - Boş Şifre
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Geçerli bir email girilir. | Email girişi başarılı olmalı. |
+| 2 | Şifre alanı boş bırakılır. | Alan boş kalmalı. |
+| 3 | Giriş denemesi yapılır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
+| 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
+","6968","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+"auth.setup.ts ile kaydedilen .auth/erp-user.json dosyasını kullanarak login olmadan Dashboard'a erişimi doğrular.","3857","ERP Dashboard Sayfasına Otomatik Giriş @smoke","erp-ui","2026-03-27","passed","2026-03-27","ERP Oturum ve Dashboard Kontrolü @smoke","erp/tests/login.spec.ts","",""
+"auth.setup.ts ile kaydedilen .auth/erp-user.json dosyasını kullanarak login olmadan Dashboard'a erişimi doğrular.","1763","ERP Dashboard Sayfasına Otomatik Giriş @erp-smoke","erp-ui","2026-03-26","passed","2026-03-26","ERP Oturum ve Dashboard Kontrolü @smoke","erp\tests\login.spec.ts","",""
+"
+### Senaryo 5: Hem Mail Hem Şifre Boş
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
+| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
+| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
+","6791","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+"
+### Alış Faturası Kayıt Senaryosu
+Yeni codegen yapısı ile tedarikçi seçilip alış faturası kaydı yapılır.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Dashboard üzerinden 'Alış' -> 'Alış Faturası' menüsüne gidilerek Yeni Fatura açılır. | Yeni fatura kayıt form ekranı yüklenmeli |
+| 2 | Tedarikçi araması yapılıp seçilir, ardından Plasiyer atanır. | Tedarikçi ve plasiyer bilgisi faturaya başarıyla işlenmeli |
+| 3 | Faturaya ürün (kalem) eklenir ve ilgili Depo seçimi yapılır. | Ürün satırı ve depo bilgisi eksiksiz eklenmeli |
+| 4 | İlgili ödeme kasası (- OTOMASYON KASA TL) seçilir ve fatura Kaydedilir. | Fatura sisteme kaydedilip liste ekranına sorunsuz dönülmeli |
+| 5 | Fatura tablosunda tedarikçi ismine tıklandıktan sonra ürün bilgileri ve tutar doğrulanır. | Faturanın kalemleriyle beraber sorunsuz oluştuğu ve tutarların listelendiği teyit edilmeli |
+","14470","Yeni Alış Faturası Oluşturma","erp-ui","2026-03-27","passed","2026-03-27","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create.spec.ts","",""
+"
+### Ticari Müşteri (Kurumsal) Kayıt Senaryosu
+
+Bu test, Faker kütüphanesi kullanılarak üretilen tamamen benzersiz (Uniq) verilerle yeni bir ticari müşteri kaydı oluşturur ve ardından listede aratarak doğrular.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Dashboard üzerinden 'Kişiler' menüsüne gidilir ve 'Yeni Kişi' tıklanır. | Yeni kişi ekleme formu açılmalı. |
+| 2 | Kişi tipi olarak 'Ticari' seçilir. | Kurumsal form alanları görünür olmalı. |
+| 3 | Kişi Kodu (Ticari72092), Firma Ünvanı ve Vergi No (7932831598) doldurulur. | Unique bilgiler hatasız girilmeli. |
+| 4 | Satıcı rolü ve şube/departman seçimleri yapılır. | Seçimler başarıyla yapılmalı. |
+| 5 | İletişim bilgileri ve Adres bilgileri tamamen benzersiz verilerle doldurulur. | Veriler forma eksiksiz girilmeli. |
+| 6 | 'Kaydet' butonuna tıklanarak kayıt tamamlanır. | Başarılı kayıt sonrası listeye dönülmeli. |
+| 7 | Arama alanına firma ünvanı yazılarak kontrol edilir. | Tabloda eklenen ticari firma doğrulanmalı. |
+","8376","Yeni Ticari Müşteri Ekleme ve Arama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Ticari) @smoke","erp/tests/person-corporate-create.spec.ts","",""
+"
+### Senaryo 2: Doğru Mail - Yanlış Şifre
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
+| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
+| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
+| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
+","6348","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
+"
+### Negatif Senaryo: Sıralı Zorunlu Alan Kontrolleri
+Yeni kişi eklerken adım adım boş bırakılan zorunlu alanların (Kişi Kodu, Ad Soyad, TC Kimlik) Toast uyarılarını test eder. Son adımda tüm veriler girilerek başarılı kayıt uyarısı doğrulanır.
+
+| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
+| :--- | :--- | :--- |
+| 1 | Kişiler menüsüne ve ardından Yeni Kişi formuna gidilir. | Yeni kişi ekleme formu açılmalı |
+| 2 | HİÇBİR ALAN DOLDURMADAN Kaydet butonuna basılır. | 'Kişi kodu zorunludur' toast uyarısı çıkmalı |
+| 3 | Sadece Kişi Kodu doldurulur ve tekrar Kaydet butonuna basılır. | 'Ad Soyad zorunludur' toast uyarısı çıkmalı |
+| 4 | Ad Soyad alanı doldurulur ve tekrar Kaydet butonuna basılır. | 'TC Kimlik No zorunludur' toast uyarısı çıkmalı |
+| 5 | TC Kimlik No doldurulur ve son kez Kaydet butonuna basılır. | 'Kişi başarıyla kaydedildi' toast uyarısı ile liste ekranına dönülmeli |
+","6596","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Negatif) @smoke","erp/tests/person-create-negative.spec.ts","",""
 "
 ### Negatif Senaryo: Kurumsal Sıralı Zorunlu Alan Kontrolleri
 Ticari kişi eklerken adım adım boş bırakılan zorunlu alanların (Kişi Kodu, Firma Ünvanı, Vergi No) Toast uyarılarını test eder. Son adımda tüm veriler girilerek başarılı kayıt uyarısı doğrulanır.
@@ -67,146 +209,4 @@ Ticari kişi eklerken adım adım boş bırakılan zorunlu alanların (Kişi Kod
 | 4 | Sadece Kişi Kodu doldurulur ve tekrar Kaydet'e basılır. | 'Firma ünvanı zorunludur' toast uyarısı çıkmalı |
 | 5 | Firma Ünvanı doldurulur ve tekrar Kaydet'e basılır. | 'Vergi No veya TC Kimlik No girilmelidir' toast uyarısı çıkmalı |
 | 6 | Vergi No doldurulur ve son kez Kaydet'e basılır. | 'Kişi başarıyla kaydedildi' toast uyarısı ile liste ekranına dönülmeli |
-","5750","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","erp/tests/person-corporate-create-negative.spec.ts","",""
-"
-### Senaryo 4: Doğru Mail - Boş Şifre
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Geçerli bir email girilir. | Email girişi başarılı olmalı. |
-| 2 | Şifre alanı boş bırakılır. | Alan boş kalmalı. |
-| 3 | Giriş denemesi yapılır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
-| 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","6968","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
-"
-### Senaryo 5: Hem Mail Hem Şifre Boş
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
-| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
-| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","6791","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-03-26","passed","2026-03-26","ERP Negatif Login Senaryoları @smoke","erp\tests\login-negative.spec.ts","",""
-"
-### Kişi Hareket Takip Senaryosu (Branch-Level Visibility)
-Kaydedilen bir Kişinin hangi şubelerce görülebileceğini ve hareketlerinin hangi yetkili şubelerce gözlemlenebileceğini test etmek.
-Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye atanan hareket sadece KİPA SES şubesince gözlemlenebilir olması beklenir.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Yeni kişi (Cari) oluşturulur | Kişi başarıyla kaydedilir |
-| 2 | KİPA SES şubesine geçilir ve Cari'ye yeni Satış Faturasıyla (Hareket) eklenir | Hareket başarıyla eklenir |
-| 3 | Bulunulan şubede (KİPA SES) ilgili faturanın (hareketin) tabloda göründüğü teyit edilir | Hareket tabloda görünmelidir |
-| 4 | Sağ üst menüden şube değiştirilip MERKEZ'e geçilir | Sistem şubesi değişmelidir |
-| 5 | MERKEZ'de kişinin hala göründüğü doğrulanır ve Hareketler detayına girilir | Kişi listede bulunmalı ve detayına girilebilmeli |
-| 6 | MERKEZ'de kişinin hareketler sekmesinde hareketin olmadığı doğrulanır | ""Hareket bulunamadı"" yazısı GÖRÜNMELİDİR |
-","48153","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişiler Yönetimi @smoke","erp/tests/kisi-hareket-takip.spec.ts","",""
-"
-### Kişi Hareket Takip Senaryosu (Branch-Level Visibility)
-Kaydedilen bir Kişinin hangi şubelerce görülebileceğini ve hareketlerinin hangi yetkili şubelerce gözlemlenebileceğini test etmek.
-Yeni bir cari kaydediliyor bu cari tüm şubelerde görülebilir, ancak cariye atanan hareket sadece KİPA SES şubesince gözlemlenebilir olması beklenir.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Yeni kişi (Cari) oluşturulur | Kişi başarıyla kaydedilir |
-| 2 | KİPA SES şubesine geçilir ve Cari'ye yeni Satış Faturasıyla (Hareket) eklenir | Hareket başarıyla eklenir |
-| 3 | Bulunulan şubede (KİPA SES) ilgili faturanın (hareketin) tabloda göründüğü teyit edilir | Hareket tabloda görünmelidir |
-| 4 | Sağ üst menüden şube değiştirilip MERKEZ'e geçilir | Sistem şubesi değişmelidir |
-| 5 | MERKEZ'de kişinin hala göründüğü doğrulanır ve Hareketler detayına girilir | Kişi listede bulunmalı ve detayına girilebilmeli |
-| 6 | MERKEZ'de kişinin hareketler sekmesinde hareketin olmadığı doğrulanır | ""Hareket bulunamadı"" yazısı GÖRÜNMELİDİR |
-","38162","Kişi Hareket Takip Senaryosu","erp-ui","2026-03-26","passed","2026-03-26","ERP - Kişiler Yönetimi @smoke @auth","erp\tests\kisi-hareket-takip.spec.ts","",""
-"
-### Stok Kayıt Senaryosu
-
-Bu test, Faker kullanılarak tamamen rastgele kod, ad ve fiyat verileriyle yeni bir stok (ürün) kartı oluşturur ve listenin doğruluğunu teyit eder.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Dashboard üzerinden 'Stok' menüsüne gidilir ve 'Yeni Ürün' tıklanır. | Yeni stok ekleme formu açılmalı. |
-| 2 | Benzersiz Stok Kodu (${testData.stockCode}) ve Ürün Adı (${testData.stockName}) doldurulur. | Temel bilgiler başarıyla girilmeli. |
-| 3 | Marka araması yapılarak seçilir (örn: OTOMASYON). | İlgili marka başarıyla seçilebilmeli. |
-| 4 | Şube/Departman alanından 'Tüm Şubeler' işaretlenir. | Şube kısıtlamaları kaldırılmalı/atanmalı. |
-| 5 | Kategori ve Nitelik (OTOMASYON NİTELİK vb.) tanımlamaları yapılır. | Ürün varyasyonları/özellikleri belirlenmeli. |
-| 6 | Alış ve Satış fiyatları doldurulur. | Fiyatlandırma bilgileri kaydedilmeli. |
-| 7 | (In-Memory) Sanal bir ürün resmi sisteme otomatik yüklenir. | Windows/OS penceresi açılmadan arka planda resim yüklenmeli. |
-| 8 | 'Kaydet' butonuna tıklanarak ürün oluşturulur. | Kayıt işleminin ardından stok listesi ekranına dönülmeli. |
-| 9 | Stok adıyla filtreleme yapılarak detayına girilir ve Stok Kodu'nun varlığı içeride doğrulanır. | Ürünün sisteme başarılı şekilde eklendiği %100 teyit edilmeli. |
-","9375","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Stok Yönetimi @smoke","erp/tests/stock-create.spec.ts","",""
-"
-### Ticari Müşteri (Kurumsal) Kayıt Senaryosu
-
-Bu test, Faker kütüphanesi kullanılarak üretilen tamamen benzersiz (Uniq) verilerle yeni bir ticari müşteri kaydı oluşturur ve ardından listede aratarak doğrular.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Dashboard üzerinden 'Kişiler' menüsüne gidilir ve 'Yeni Kişi' tıklanır. | Yeni kişi ekleme formu açılmalı. |
-| 2 | Kişi tipi olarak 'Ticari' seçilir. | Kurumsal form alanları görünür olmalı. |
-| 3 | Kişi Kodu (Ticari97728), Firma Ünvanı ve Vergi No (4082500562) doldurulur. | Unique bilgiler hatasız girilmeli. |
-| 4 | Satıcı rolü ve şube/departman seçimleri yapılır. | Seçimler başarıyla yapılmalı. |
-| 5 | İletişim bilgileri ve Adres bilgileri tamamen benzersiz verilerle doldurulur. | Veriler forma eksiksiz girilmeli. |
-| 6 | 'Kaydet' butonuna tıklanarak kayıt tamamlanır. | Başarılı kayıt sonrası listeye dönülmeli. |
-| 7 | Arama alanına firma ünvanı yazılarak kontrol edilir. | Tabloda eklenen ticari firma doğrulanmalı. |
-","9884","Yeni Ticari Müşteri Ekleme ve Arama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Ticari) @smoke","erp/tests/person-corporate-create.spec.ts","",""
-"
-### Negatif Senaryo: Sıralı Zorunlu Alan Kontrolleri
-Yeni kişi eklerken adım adım boş bırakılan zorunlu alanların (Kişi Kodu, Ad Soyad, TC Kimlik) Toast uyarılarını test eder. Son adımda tüm veriler girilerek başarılı kayıt uyarısı doğrulanır.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Kişiler menüsüne ve ardından Yeni Kişi formuna gidilir. | Yeni kişi ekleme formu açılmalı |
-| 2 | HİÇBİR ALAN DOLDURMADAN Kaydet butonuna basılır. | 'Kişi kodu zorunludur' toast uyarısı çıkmalı |
-| 3 | Sadece Kişi Kodu doldurulur ve tekrar Kaydet butonuna basılır. | 'Ad Soyad zorunludur' toast uyarısı çıkmalı |
-| 4 | Ad Soyad alanı doldurulur ve tekrar Kaydet butonuna basılır. | 'TC Kimlik No zorunludur' toast uyarısı çıkmalı |
-| 5 | TC Kimlik No doldurulur ve son kez Kaydet butonuna basılır. | 'Kişi başarıyla kaydedildi' toast uyarısı ile liste ekranına dönülmeli |
-","4864","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Negatif) @smoke","erp/tests/person-create-negative.spec.ts","",""
-"
-### Alış Faturası Negatif Senaryolar
-Alış faturası formundaki zorunlu alanların boş bırakılması durumunda beklenen uyarı mesajları doğrulanır.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Form açılıp boşken Kaydet'e tıklanır | ""Lütfen tedarikçi bilgilerini eksiksiz doldurunuz"" toast mesajı |
-| 2 | Tedarikçi seçilir, Kaydet'e tıklanır | ""Lütfen en az bir ürün ekleyiniz"" toast mesajı |
-| 3 | Ürün seçilir, Kaydet'e tıklanır | ""Lütfen plasiyer seçiniz"" toast mesajı |
-| 4 | Plasiyer seçilir, Kaydet'e tıklanır | ""Nakit ödemelerde kasa seçimi zorunludur"" toast mesajı |
-| 5 | Kasa seçilir, Kaydet'e tıklanır | ""Fatura kaydedildi"" başarı mesajı |
-","41797","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-26","passed","2026-03-26","ERP - Alış Yönetimi @smoke @negative","erp\tests\purchase-invoice-create-negative.spec.ts","",""
-"
-### Satış Faturası Kayıt Senaryosu
-Yeni codegen yapısı ile müşteri seçilip fatura kaydı yapılır.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Dashboard üzerinden 'Fatura' menüsüne gidilerek Yeni Fatura açılır. | Yeni fatura kayıt form ekranı yüklenmeli |
-| 2 | Müşteri araması yapılıp müşteri seçilir, ardından Plasiyer atanır. | Cari ve satıcı bilgileri faturaya başarıyla işlenmeli |
-| 3 | Faturaya ürün (kalem) eklenir ve ilgili Depo seçimi yapılır. | Ürün satırı ve depo bilgisi eksiksiz eklenmeli |
-| 4 | Fatura alt açıklamalarına (IBAN, ÖDEME KODU vb.) detaylı notlar eklenir. | Açıklamalar dropdown'una notlar başarıyla kaydedilmeli |
-| 5 | İlgili ödeme kasası (${testData.cashRegister}) seçilir ve fatura Kaydedilir. | Fatura sisteme kaydedilip liste ekranına sorunsuz dönülmeli |
-| 6 | Fatura tablosunda müşteri ismine tıklandıktan sonra ürün bilgileri doğrulanır. | Faturanın kalemleriyle beraber sorunsuz oluştuğu %100 teyit edilmeli |
-","13597","Yeni Satış Faturası Oluşturma","erp-ui","2026-03-27","passed","2026-03-27","ERP - Fatura Yönetimi @smoke","erp/tests/invoice-create.spec.ts","",""
-"
-### Bireysel Müşteri (Kişi) Kayıt Senaryosu
-
-Bu test, Faker kütüphanesi kullanılarak üretilen dinamik verilerle yeni bir bireysel müşteri kaydı oluşturur ve ardından listede aratarak doğrulama yapar.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Dashboard üzerinden 'Kişiler' menüsüne gidilir ve 'Yeni Kişi' tıklanır. | Yeni kişi ekleme formu açılmalı. |
-| 2 | Kişi Kodu (Auto90469), Ad Soyad, TC No gibi temel bilgiler doldurulur. | Form alanları başarıyla doldurulmalı. |
-| 3 | Müşteri rolü ve kullanılacak şube/departmanlar seçilir. | Seçimler başarıyla yapılmalı. |
-| 4 | İletişim bilgileri (Telefon, E-posta) ve Adres bilgileri doldurulur. | Veriler forma eksiksiz girilmeli. |
-| 5 | 'Kaydet' butonuna tıklanarak kayıt tamamlanır. | Başarılı kayıt sonrası kişi listesine dönülmeli. |
-| 6 | Arama alanına kayıt edilen kişinin adı yazılarak kontrol edilir. | Tabloda eklenen kişi doğrulanmalı. |
-","6796","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi @smoke","erp/tests/person-create.spec.ts","",""
-"
-### Alış Faturası Negatif Senaryolar
-Alış faturası formundaki zorunlu alanların boş bırakılması durumunda beklenen uyarı mesajları doğrulanır.
-
-| Adım No | İşlem / Aksiyon | Beklenen Sonuç |
-| :--- | :--- | :--- |
-| 1 | Form açılıp boşken Kaydet'e tıklanır | ""Lütfen tedarikçi bilgilerini eksiksiz doldurunuz"" toast mesajı |
-| 2 | Tedarikçi seçilir, Kaydet'e tıklanır | ""Lütfen en az bir ürün ekleyiniz"" toast mesajı |
-| 3 | Ürün seçilir, Kaydet'e tıklanır | ""Lütfen plasiyer seçiniz"" toast mesajı |
-| 4 | Plasiyer seçilir, Kaydet'e tıklanır | ""Nakit ödemelerde kasa seçimi zorunludur"" toast mesajı |
-| 5 | Kasa seçilir, Kaydet'e tıklanır | ""Fatura kaydedildi"" başarı mesajı |
-","43284","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-03-27","passed","2026-03-27","ERP - Alış Yönetimi @smoke","erp/tests/purchase-invoice-create-negative.spec.ts","",""
+","7403","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-03-27","passed","2026-03-27","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","erp/tests/person-corporate-create-negative.spec.ts","",""
