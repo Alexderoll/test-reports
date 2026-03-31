@@ -1,0 +1,10 @@
+--- Satış Menüsü Navigasyonu Başladı ---
+Satış menüsü tıklandı.
+Satış Faturası seçeneği tıklandı.
+Yeni Fatura butonuna tıklandı.
+Yeni Fatura formu yüklendi.
+Müşteri seçiliyor: Cari Hareket Beth Hane -> Cari Hareket Beth Hane
+Müşteri adı yazıldı, listeden seçiliyor...
+Müşteri seçildi.
+Plasiyer seçiliyor: OTOMASYON TEMSİLCİ
+Plasiyer seçildi.

@@ -1,0 +1,4 @@
+--- Alış Menüsü Navigasyonu Başladı ---
+Yeni Fatura formu açıldı.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.

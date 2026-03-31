@@ -1,0 +1,16 @@
+--- Satış Menüsü Navigasyonu Başladı ---
+Satış menüsü tıklandı.
+Satış Faturası seçeneği tıklandı.
+Yeni Fatura butonuna tıklandı.
+Yeni Fatura formu yüklendi.
+Müşteri seçiliyor: test otomasyon-1 -> TEST OTOMASYON-
+Müşteri adı yazıldı, listeden seçiliyor...
+Müşteri seçildi.
+Plasiyer seçiliyor: OTOMASYON TEMSİLCİ
+Plasiyer seçildi.
+Ürün ekleniyor: otomasyon test ürünü-1 -> Otomasyon Test Ürünü-
+Ürün seçildi.
+Depo seçiliyor: OTOMASYON DEPO-
+Depo seçildi.
+Fatura kaydediliyor...
+Kaydet butonu tıklandı.

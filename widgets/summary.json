@@ -2,19 +2,19 @@
   "reportName": "Glopark ERP TEST Sonuçları",
   "testRuns": [],
   "statistic": {
-    "failed": 0,
+    "failed": 4,
     "broken": 0,
     "skipped": 0,
-    "passed": 16,
+    "passed": 13,
     "unknown": 0,
-    "total": 16
+    "total": 17
   },
   "time": {
-    "start": 1774863264373,
-    "stop": 1774863448209,
-    "duration": 183836,
-    "minDuration": 3331,
-    "maxDuration": 48906,
-    "sumDuration": 224300
+    "start": 1774965153669,
+    "stop": 1774965324370,
+    "duration": 170701,
+    "minDuration": 2963,
+    "maxDuration": 40084,
+    "sumDuration": 206301
   }
 }
