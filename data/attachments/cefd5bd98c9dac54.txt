@@ -1,0 +1,31 @@
+--- Alış Menüsü Navigasyonu Başladı ---
+Yeni Fatura formu açıldı.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.
+Toast mesajı doğrulanıyor: Lütfen tedarikçi bilgilerini eksiksiz doldurunuz
+Tedarikçi seçiliyor: test oto -> TEST OTOMASYON-1
+Tedarikçi adı yazıldı, listeden seçiliyor...
+Tedarikçi seçildi.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.
+Toast mesajı doğrulanıyor: Lütfen en az bir ürün ekleyiniz
+Ürün ekleniyor: otomas -> Otomasyon Test Ürünü-1
+Ürün seçildi.
+Depo seçiliyor: OTOMASYON DEPO-1
+Depo seçildi.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.
+Toast mesajı doğrulanıyor: Lütfen plasiyer seçiniz
+Plasiyer seçiliyor: OTOMASYON TEMSİLCİ
+Plasiyer seçildi.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.
+Toast mesajı doğrulanıyor: Nakit ödemelerde kasa seçimi zorunludur
+Ürün fiyatı giriliyor: 100
+Ürün fiyatı girildi.
+Ödeme tutarı giriliyor: 100 ve Kasa seçiliyor: - OTOMASYON KASA TL
+Ödeme tutarı girildi ve Tab/Blur ile onaylandı.
+Kasa seçildi.
+İade faturası kaydediliyor...
+Kaydet butonu tıklandı.
+Toast mesajı doğrulanıyor: Fatura kaydedildi

@@ -1,5 +1,0 @@
---- Alış Menüsü Navigasyonu Başladı ---
-Yeni Fatura formu açıldı.
-Tedarikçi seçiliyor: test oto -> TEST OTOMASYON-1
-Tedarikçi adı yazıldı, listeden seçiliyor...
-Tedarikçi seçildi.

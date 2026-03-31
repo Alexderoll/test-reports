@@ -1,0 +1,20 @@
+--- Satış Menüsü Navigasyonu Başladı ---
+Satış menüsü tıklandı.
+Satış Faturası seçeneği tıklandı.
+Yeni Fatura butonuna tıklandı.
+Yeni Fatura formu yüklendi.
+Müşteri seçiliyor: erol demir -> EDK10
+Müşteri adı yazıldı, listeden seçiliyor...
+Müşteri seçildi.
+Plasiyer seçiliyor: OTOMASYON TEMSİLCİ
+Plasiyer seçildi.
+Ürün ekleniyor: kılıf -> APPLE IPHONE 7 PLUS KILIF
+Ürün seçildi.
+Ürün fiyatı giriliyor: 500
+Ürün fiyatı girildi.
+Ödeme tutarı giriliyor: 500 ve Kasa seçiliyor: - MERKEZ KASA - TL
+Ödeme tutarı girildi ve Tab/Blur ile onaylandı.
+Kasa seçildi.
+Fatura kaydediliyor...
+Kaydet butonu tıklandı.
+--- E-Arşiv Oluşturma Süreci Başladı ---
