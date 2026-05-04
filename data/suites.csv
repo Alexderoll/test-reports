@@ -1,19 +1,19 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","0","Kişi Hareket Takip Senaryosu","erp-ui","2026-05-04","skipped","2026-05-04","Seneryolar @smoke","","",""
-"","0","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Negatif) @smoke","","",""
-"","0","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Stok Yönetimi @smoke","","",""
-"","0","Fatura Düzenleme ve Silme (Full Scenario)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
-"","0","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi @smoke","","",""
 "
-### Senaryo 2: Doğru Mail - Yanlış Şifre
+### Senaryo 5: Hem Mail Hem Şifre Boş
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
 | :--- | :--- | :--- |
-| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
-| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
-| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
-| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
-","15129","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
+| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
+| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
+","15323","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+"","0","Yeni Alış Faturası Oluşturma","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Alış Yönetimi @smoke","","",""
+"","0","Adım Adım Zorunlu Alan (Kişi Kodu -> Ad Soyad -> TC Kimlik) Hata Doğrulamaları","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Negatif) @smoke","","",""
+"","0","Satış Faturası Oluşturma ve İade Süreci","erp-ui","2026-05-04","skipped","2026-05-04","Seneryolar @smoke","","",""
+"","0","Geçersiz Fatura Numarası ile Arama (Kayıt Bulunamadı)","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
+"","0","Dövizli Fatura Oluşturma (EUR)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
+"","0","Yeni Satış Faturası Oluşturma","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Yönetimi @smoke","","",""
 "
 ### Senaryo 3: Boş Mail - Doğru Şifre
 
@@ -23,8 +23,11 @@
 | 2 | Geçerli bir şifre girilir. | Şifre maskelenmiş olmalı. |
 | 3 | 'Giriş Yap' butonuna tıklanır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
 | 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","15388","Senaryo 3: Boş Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
-"","0","Karmaşık KDV ve İskonto Senaryosu - Matematik Dedektifi","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Hesaplama Denetimi @smoke","","",""
+","15876","Senaryo 3: Boş Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+"","0","Fatura Düzenleme ve Silme (Full Scenario)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
+"","0","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","","",""
+"","0","Yeni Ticari Müşteri Ekleme ve Arama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Ticari) @smoke","","",""
+"","1","Dövizli Fatura Oluşturma (USD)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
 "
 ### Senaryo 1: Yanlış Mail - Doğru Şifre
 
@@ -34,25 +37,20 @@
 | 2 | Geçerli bir şifre girilir. | Şifre maskelenmiş olmalı. |
 | 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
 | 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
-","16976","Senaryo 1: Yanlış Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
-"","0","Ticari (Kurumsal) Kişi - Adım Adım Zorunlu Alan Hata Doğrulamaları","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Kurumsal Negatif) @smoke","","",""
-"","0","Yeni Satış Faturası Oluşturma","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Yönetimi @smoke","","",""
-"","0","Satış Faturası Oluşturma ve İade Süreci","erp-ui","2026-05-04","skipped","2026-05-04","Seneryolar @smoke","","",""
-"","0","Dövizli Fatura Oluşturma (EUR)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
-"","0","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
+","17526","Senaryo 1: Yanlış Mail ve Doğru Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+"","0","Yeni Stok (Ürün) Tanımlama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Stok Yönetimi @smoke","","",""
+"","0","Yeni Bireysel Müşteri Ekleme ve Arama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi @smoke","","",""
+"","0","Kişi Hareket Takip Senaryosu","erp-ui","2026-05-04","skipped","2026-05-04","Seneryolar @smoke","","",""
 "
-### Senaryo 5: Hem Mail Hem Şifre Boş
+### Senaryo 2: Doğru Mail - Yanlış Şifre
 
 | Adım No | İşlem / Aksiyon | Beklenen Sonuç |
 | :--- | :--- | :--- |
-| 1 | Email ve Şifre alanları temizlenir. | Alanlar boş olmalı. |
-| 2 | Giriş denemesi yapılır. | İşlem engellenmeli. |
-| 3 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","14564","Senaryo 5: Her İki Alanın da Boş Bırakılması","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
-"","0","Yeni Alış Faturası Oluşturma","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Alış Yönetimi @smoke","","",""
-"","1","Matematik Dedektifi: Fatura Kalemi Hesaplamaları Doğruluğu","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
-"","0","Geçersiz Fatura Numarası ile Arama (Kayıt Bulunamadı)","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
-"","0","Fatura Arama ve Bütünsel Listeleme Teyidi","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
+| 1 | Geçerli bir email girilir. | Email girişi kabul edilmeli. |
+| 2 | Geçersiz bir şifre girilir. | Şifre maskelenmiş olmalı. |
+| 3 | 'Giriş Yap' butonuna tıklanır. | ""Geçersiz giriş"" uyarısı alınmalı. |
+| 4 | 2FA ekranına geçilmediği doğrulanır. | Test başarıyla tamamlanmalı. |
+","15055","Senaryo 2: Doğru Mail ve Yanlış Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
 "
 ### Senaryo 4: Doğru Mail - Boş Şifre
 
@@ -62,7 +60,9 @@
 | 2 | Şifre alanı boş bırakılır. | Alan boş kalmalı. |
 | 3 | Giriş denemesi yapılır. | Sistem giriş denemesini engellemeli veya uyarı vermelidir. |
 | 4 | Giriş yapılamadığı doğrulanır. | Test başarıyla tamamlanmalı. |
-","15978","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+","15365","Senaryo 4: Doğru Mail ve Boş Şifre ile Giriş Denemesi","erp-negative","2026-05-04","passed","2026-05-04","Login @smoke","","",""
+"","0","Fatura Arama ve Bütünsel Listeleme Teyidi","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
+"","1","Matematik Dedektifi: Fatura Kalemi Hesaplamaları Doğruluğu","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Etkileşimi @smoke","","",""
 "
 ### ERP Giriş ve Oturum Yapılandırma Senaryosu
 
@@ -74,6 +74,6 @@
 | 4 | Email (halerva2020@gmail.com) ve şifre girilerek Giriş Yap tıklanır. | Kimlik doğrulama süreci başlamalı. |
 | 5 | Dinamik üretilen TOTP kodu girilerek doğrulanır. | 2FA başarılı şekilde geçilmeli. |
 | 6 | Dashboard doğrulanır ve oturum kaydedilir. | Oturum başarıyla saklanmalı. |
-","44107","authenticate ERP","setup","2026-05-04","failed","2026-05-04","","","",""
-"","0","Yeni Ticari Müşteri Ekleme ve Arama","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Kişi Yönetimi (Ticari) @smoke","","",""
-"","0","Dövizli Fatura Oluşturma (USD)","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
+","43831","authenticate ERP","setup","2026-05-04","failed","2026-05-04","","","",""
+"","0","Karmaşık KDV ve İskonto Senaryosu - Matematik Dedektifi","erp-ui","2026-05-04","skipped","2026-05-04","ERP - Fatura Hesaplama Denetimi @smoke","","",""
+"","0","Alış Faturası Negatif Validasyon Kontrolleri","erp-ui","2026-05-04","skipped","2026-05-04","Fatura @smoke","","",""
